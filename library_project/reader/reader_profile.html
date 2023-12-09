@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ENG">
+<head>
+    <title>Reader Profile</title>
+</head>
+<body>
+    <h1>Reader Profile</h1>
+    <p>Name: {{ reader.name }}</p>
+    <p>Email: {{ reader.email }}</p>
+    <h2>Favorite Books</h2>
+    <ul>
+        {% for book in reader.favorite_books.all %}
+            <li>{{ book.title }} by {{ book.author }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
